@@ -2,7 +2,7 @@
   <div>
     <form @submit.prevent>
       <h4>Название поста</h4>
-      <my-input v-model:modelvalue="post.title" type="text" placeholder="Название"/>
+      <my-input v-model:modelvalue="post.title" type="text" placeholder="Название" v-focus/>
       <my-input v-model:modelvalue="post.body"  type="text" placeholder="Описание"/>
       <MyButton
           class="button-28"
@@ -18,6 +18,7 @@
 <script>
 import MyButton from "./UI/MyButton";
 import MyInput from "./UI/MyInput";
+import directives from "@/directives";
 export default {
   components: {MyInput, MyButton},
   data(){
